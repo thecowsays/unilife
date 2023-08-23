@@ -1,5 +1,3 @@
-// import react from "@vitejs/plugin-react-swc";
-
 import "./Header.module.css";
 
 function Header() {

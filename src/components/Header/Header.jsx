@@ -1,4 +1,5 @@
-import ReactModal from "react-modal";
+import { useState } from "react";
+// import MobileModal from '../MobileModal'
 
 import HeaderCSS from "./Header.module.css";
 
@@ -6,7 +7,16 @@ import { HiBars4 } from "react-icons/hi2";
 
 function Header() {
   // handler for menu modal
-  const handleClick = () => {};
+  // init FALSE as menu should be closed by default
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const handleClick = () => {
+    // setMenuOpen(e.target.value, true);
+    // setMenuOpen(true);
+    // if menu is closed, open; if menu is open, close
+    isMenuOpen ? setMenuOpen(false) : setMenuOpen(true);
+    // console.log(isMenuOpen);
+  };
 
   return (
     <div className={HeaderCSS.headerContainer}>

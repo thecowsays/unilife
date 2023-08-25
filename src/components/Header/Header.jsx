@@ -19,9 +19,9 @@ function Header() {
   };
 
   return (
-    <div className={HeaderCSS.headerContainer}>
+    <div className={HeaderCSS.header}>
       {/* <img src="src/assets/svg/unilife-logo-text-vector.svg" /> */}
-      <div className={HeaderCSS.logoContainer}>
+      <div className={HeaderCSS.logoText}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="49"
@@ -73,7 +73,7 @@ function Header() {
         </svg>
       </div>
 
-      <HiBars4 color="#FFF" size="2em" onClick={handleClick} />
+      <HiBars4 className={HeaderCSS.menuIcon} onClick={handleClick} />
     </div>
   );
 }

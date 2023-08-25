@@ -1,4 +1,4 @@
-.header-container {
+.header {
     background-color: var(--bright);
     height: 60px;
     margin-bottom: 20px;
@@ -8,10 +8,15 @@
     padding: 8px 16px;
 }
 
- .logo-container {
+ .logo-text {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.menuIcon {
+    color: var(--text-alt);
+    font-size: 2rem;
 }
 
 /* -- For hiding mobile menu, etc. -- */

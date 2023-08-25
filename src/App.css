@@ -280,5 +280,22 @@ summary {
 
 
 :root {
+	--bright: #00A2E1;
+	--dim: #3A5295;
+
+	/* Light Mode */
+	--text: #000;
+	--text-alt: #fff;
+	--bg-light: #fff;
+
+	/* Dark Mode */
+	/* --text-dark: #00A2E1; */
+	/* --text-alt-dark: #fff; */
+	/* --bg-dark: #000; */
+
+
+
 	font-family: 'Epilogue', sans-serif;
+	font-size: 16px;
+	color: var(--text)
 }

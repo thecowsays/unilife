@@ -19,14 +19,17 @@
     font-size: 2rem;
 }
 
-/* -- For hiding mobile menu, etc. -- */
-.hidden {
-    display: none;
+.menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
 }
 
 /* -- Everything larger than phone in landscape -- */
 @media all and (min-width: 640px) and (orientation: landscape) {
-    .header-container {
-
+    .menuIcon {
+        display: none;
     }
 }

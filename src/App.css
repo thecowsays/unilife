@@ -304,3 +304,8 @@ a, a:hover, a:visited, a:active {
     text-decoration: none;
 	cursor: pointer;
 }
+
+/* -- For hiding mobile menu, etc. -- */
+.hidden {
+    display: none;
+}

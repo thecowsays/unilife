@@ -1,17 +1,27 @@
 .header-container {
-    background-color: aquamarine;
+    background-color: var(--bright);
     height: 60px;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5em 1em;
+    padding: 8px 16px;
 }
 
  .logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
+/* -- For hiding mobile menu, etc. -- */
+.hidden {
+    display: none;
+}
+
+/* -- Everything larger than phone in landscape -- */
+@media all and (min-width: 640px) and (orientation: landscape) {
+    .header-container {
+
+    }
+}

@@ -1,6 +1,6 @@
 import { useState } from "react";
-// import MobileModal from '../MobileModal'
 
+import NavItems from "../NavItems/NavItems";
 import HeaderCSS from "./Header.module.css";
 
 import { HiBars4 } from "react-icons/hi2";
@@ -8,14 +8,15 @@ import { HiBars4 } from "react-icons/hi2";
 function Header() {
   // handler for menu modal
   // init FALSE as menu should be closed by default
-  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleClick = () => {
-    // setMenuOpen(e.target.value, true);
-    // setMenuOpen(true);
-    // if menu is closed, open; if menu is open, close
-    isMenuOpen ? setMenuOpen(false) : setMenuOpen(true);
-    // console.log(isMenuOpen);
+  // -- Open and close menu component --
+  const openMenu = () => {
+    setIsOpen(true);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -72,8 +73,11 @@ function Header() {
           />
         </svg>
       </div>
-
-      <HiBars4 className={HeaderCSS.menuIcon} onClick={handleClick} />
+      <div className={HeaderCSS.menu}>
+        {/* -- Conditionally render using Fn to set state -- */}
+        {isOpen && <NavItems onClick={closeMenu} />}
+        <HiBars4 className={HeaderCSS.menuIcon} onClick={openMenu} />
+      </div>
     </div>
   );
 }

@@ -1,13 +1,14 @@
 import Header from "./../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import Slider from "../../components/Slider/Slider";
 
-import "./Homepage.module.css";
+import HomepageCSS from "./Homepage.module.css";
 
 function Homepage() {
   return (
-    <div>
+    <div className={HomepageCSS.container}>
       <Header />
-      Homepage
+      <Slider />
       <Footer />
     </div>
   );

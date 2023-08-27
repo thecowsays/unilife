@@ -1,0 +1,22 @@
+.container {
+    background-image: url(../../assets/img/overlay-home.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+h1, p {
+    color: var(--text-alt);
+    text-align: center;
+}
+
+h1 {
+    padding: 2em 0;
+}
+
+p {
+    padding-bottom: 2em;
+}

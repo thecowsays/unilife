@@ -1,26 +1,29 @@
-import { useLocation } from "react-router-dom";
-import { useState } from "react";
+// import { useLocation } from "react-router-dom";
 
 import SliderCSS from "./Slider.module.css";
-import { useEffect } from "react";
 
 function Slider() {
-  // I want to show different text depending on which page is viewed.
-  // How can I determine the current page? -- useLocation
-  const location = useLocation();
-  const { path } = location;
+  // -- COND RENDER FOR SLIDER HEADING AND TEXT (not working atm)
 
-  useEffect(() => {
-    if (path === "/SeeAllCities") {
-      return;
-    }
-  }, []);
+  //   const location = useLocation();
+  //   const { path } = location;
+
+  //    if (path === "/SeeAllCities") {
+  //      let sliderText =
+  //    <h1>Student Accomodation</h1><p>UniLife have student accommodation available across the UK. Whatever you're after, we can help you find the right student accommodation for you.</p>    ;
+  //    } else if (path === "/CityDetails") {
+  //      let sliderText =
+  //        <h1>Search Accomodation</h1><p>Whatever you're after, we can help you find the right student accommodation for you.</p>;
+  //    } else {
+  //      let sliderText =
+  //        <h1>Find student homes with bills included</h1><p>A simple and faster way to search for student accommodation</p>;
+  //    }
 
   return (
     <div className={SliderCSS.container}>
       <div>
-        <h1>Sample Heading</h1>
-        <p>Sample paragraph</p>
+        <h1>Find student homes with bills included</h1>
+        <p>A simple and faster way to search for student accommodation</p>
       </div>
     </div>
   );

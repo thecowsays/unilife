@@ -24,9 +24,32 @@ function Search() {
         // console.log(`my array: ${citiesList}`);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [])
 
-    
+ useEffect(() => {
+   axios
+     .get(`https://unilife-server.herokuapp.com/cities`)
+        .then(res?.data?.totalPages => {
+          console.log(res?.data?.totalPages)
+        })
+        .catch((err) => console.log(err))
+    },[])
+
+    useEffect(() => {
+      // make api call to find all city names ON PAGE 2
+      axios
+        .get(
+          `https://unilife-server.herokuapp.com/cities?page=${citiesPageNumber}`
+        )
+        .then((res) => {
+          res?.data?.response?.map((city) => {
+            citiesList.push(city.name);
+            setCities(citiesList);
+          });
+          // console.log(`my array: ${citiesList}`);
+        })
+        .catch((err) => console.log(err));
+    }, []);
 
   return (
     <div className={SearchCSS.container}>
